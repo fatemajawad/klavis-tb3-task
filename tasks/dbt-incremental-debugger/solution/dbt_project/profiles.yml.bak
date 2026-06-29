@@ -1,0 +1,7 @@
+user_events:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: /workspace/dbt_project/events.duckdb
+      threads: 1

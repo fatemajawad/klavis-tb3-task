@@ -1,0 +1,21 @@
+event_id,user_id,event_type,user_name,user_email,updated_at,is_deleted
+1,101,login,Alice,alice@example.com,2024-01-01 10:00:00,false
+2,102,purchase,Bob,bob@example.com,2024-01-01 10:05:00,false
+3,103,login,Carol,carol@example.com,2024-01-01 10:10:00,false
+4,101,profile_update,Alice Updated,alice_new@example.com,2024-01-01 10:15:00,false
+5,104,login,Dave,dave@example.com,2024-01-01 10:20:00,false
+6,105,login,Eve,eve@example.com,2024-01-01 10:25:00,false
+7,102,profile_update,Bob Updated,bob_new@example.com,2024-01-01 10:30:00,false
+8,106,login,Frank,frank@example.com,2024-01-01 10:30:00,false
+9,107,login,Grace,grace@example.com,2024-01-01 10:35:00,false
+10,108,delete_account,Heidi,heidi@example.com,2024-01-01 10:40:00,true
+11,109,login,Ivan,ivan@example.com,2024-01-01 11:00:00,false
+12,110,purchase,Judy,judy@example.com,2024-01-01 11:05:00,false
+13,101,purchase,Alice Final,alice_final@example.com,2024-01-01 11:10:00,false
+14,102,login,Bob Final,bob_final@example.com,2024-01-01 11:15:00,false
+15,111,login,Karl,karl@example.com,2024-01-01 11:20:00,false
+16,106,profile_update,Frank Updated,frank_new@example.com,2024-01-01 10:30:00,false
+17,112,login,Laura,laura@example.com,2024-01-01 11:30:00,false
+18,108,restore_account,Heidi Restored,heidi_restored@example.com,2024-01-01 11:35:00,false
+19,113,login,Mallory,mallory@example.com,2024-01-01 11:40:00,false
+20,114,login,Niaj,niaj@example.com,2024-01-01 11:45:00,false

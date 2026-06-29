@@ -1,0 +1,29 @@
+version: 2
+
+seeds:
+  - name: raw_events
+    description: Raw user event stream
+    columns:
+      - name: event_id
+        description: Unique event identifier
+      - name: user_id
+        description: User identifier
+      - name: updated_at
+        description: Event timestamp
+      - name: is_deleted
+        description: Soft delete flag
+
+models:
+  - name: user_events_mart
+    description: >
+      Deduplicated mart of latest user state.
+      Should contain exactly one row per active (non-deleted) user,
+      reflecting their most recent event.
+    columns:
+      - name: user_id
+        description: Unique user identifier
+        tests:
+          - unique
+          - not_null
+      - name: is_deleted
+        description: Should always be false in this mart
