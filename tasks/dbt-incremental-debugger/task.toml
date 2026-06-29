@@ -1,19 +1,12 @@
-[task]
+version = "1.0"
+
+[metadata]
 name = "dbt-incremental-debugger"
-version = "1.0.0"
-description = """
-A dbt project processes user event data with an incremental model. The model has been
-deployed to production but stakeholders report that downstream dashboards show stale data,
-duplicate records, and unexpected row counts after each refresh. No errors are thrown.
-Your job is to find and fix all bugs in the incremental model SQL so the verifier passes.
-"""
-author = "Fatima Jawad"
-difficulty = "hard"
-domain = ["data-engineering", "dbt", "sql", "incremental-models"]
-tags = ["dbt", "sql", "incremental", "debugging", "data-quality"]
+description = "Debug a dbt incremental model with 3 silent SQL bugs causing stale data and soft-delete leakage."
 
 [environment]
 dockerfile = "environment/Dockerfile"
+build_timeout_sec = 600.0
 
 [solution]
 dockerfile = "solution/Dockerfile"
@@ -21,3 +14,7 @@ dockerfile = "solution/Dockerfile"
 [verifier]
 dockerfile = "tests/Dockerfile"
 reward_file = "/logs/verifier/reward.txt"
+timeout_sec = 900.0
+
+[agent]
+timeout_sec = 900.0
