@@ -1,7 +1,0 @@
-user_events:
-  target: dev
-  outputs:
-    dev:
-      type: duckdb
-      path: /tmp/test_events.duckdb
-      threads: 1
