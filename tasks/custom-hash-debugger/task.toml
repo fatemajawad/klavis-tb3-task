@@ -1,0 +1,15 @@
+schema_version = "1.3"
+
+[metadata]
+name = "custom-hash-debugger"
+description = "A custom 64-bit hash function implemented as a Python C extension has a single bit-manipulation bug causing wrong hash outputs. Fix the C code and recompile so all 500 test vectors match the expected values."
+
+[environment]
+dockerfile = "environment/Dockerfile"
+
+[verifier]
+timeout_sec = 600.0
+environment_mode = "shared"
+
+[agent]
+timeout_sec = 900.0
